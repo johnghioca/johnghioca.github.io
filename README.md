@@ -1,2 +1,2 @@
-# jghioca.github.io
+# johnghioca.github.io
 Production site for my portfolio.
