@@ -209,14 +209,6 @@ header.main {
 	font-size: 24px;
 	font-weight: normal;
 }
-.external-link {
-	background-color: white;
-	img {
-		&:hover {
-			@include opacity(0.8);
-		}
-	}
-}
 #menu {
 	display: block;
 	width: 1.75em;
