@@ -13,12 +13,12 @@ export default function Home() {
       <header className="bg-black">
         <div className="xl:max-w-6xl xl:mx-auto xl:flex xl:items-center xl:justify-between">
           <div className="h-16 flex items-center justify-between mx-5 md:mx-12 xl:mx-0">
-            <div
+            <h1
               className="h-10 bg-no-repeat font-serif font-bold indent-12 leading-10 text-2xl
           bg-[url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAACZFBMVEUAn98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An98An9////8I4/tjAAAAzHRSTlMAAQIDBAUGBwkKCw0PEBESExQVFhcYGRobHB0eHyAhIiMlJicoKSorLC4vMDEyMzU3ODk8PT4/QEJDREVGSExNTlFSU1RVVldYWVpbXF1eX2FlZmdoaWpsbW5vcHFzdHV3eHl6e3x+f4CBgoSFhoeIiYqLjI2Oj5KUlZaXmJmdnqCho6SlpqeoqaqrrK6vsLGys7i6u72+wcLDxMbJyszOz9DR0tPU1dbX2Nna29zd3uHi4+Tl5ujp6uvs7e7v8PHy9PX29/r7/P3+/wCSkOtyAAADtklEQVR42mNhQAZC+qw/3z/6zPQbIXQaSrMgKdNxZ7x37+5nBr3/lxkwAEIhZ7nEsXVfQCyNpwx4FNqVni34ATX5Dh6FObFVe6FMLlNJZh0Q48qhBRgK63wSrsGE5LibH+VHMzBsbsY0scon4h5cSInjO8NHIP0Y0+qogCyEOgZthp843KhSsOgMkpASw38cCvvfT2FgYJR+AhXSYGBkuAVhijG/QFIYLl4AZPznS5sFFlHk/guTDBLY+B+hkCn/xTEQ65p1cy2IVmOARWA/c/17JKt9WJZDmLNn1zcCKS2YwsRLuShuDGHYDWWX7XwzFckvD3NRPCOq8fgNlP2+vvHLQjZtBsZ/DLpA7j5UXxsyIJLKdo/sTxd4QCbewwweLYa7CF7FwXKPY1aMTAy7WzEUyjK8QfC+T/z6oWobL8SRnny3bjz6B1fIz/ABSd9SBoZveTN+y4AMVFRkYPh0ffnNWy9ArmXhZpBW+vTtFzSQ/zMw/r/UqZerDmT//MXKxmduzvDp2ZYrd6+x/GUwNFdkE2H5/v3Xb7CVvFytDIW/9gBNXwbiMrJzsvFw/GZj+c5wbrOUvKayqhTcR0dWlYHi+scnpMxlz/KRQXPtgwcHGRgENVRU1JQYLzQ/ZhCd6o3uaUGWVwwq0OA+fpyBQUH4LChOVFrQMiiDLMt1Bi3xl3D+A4Xu5eeAycwByLacg1DnpcNyHpgBV8MFfGsZToMUgoCu2y64uBYPy5MrOl5whcHl5ydch5jMwLC75TQ8lentZWHYpaNtCvVaZuL0+RDWXaDC6p+dabDM7LeQhWFjNntOPJhbZJ12AcxgZLgPzNUMTS2JUH3hm91YGL7Pz9CMWMHAwBHAGczABw47NoZfDAyHGBhqUzRugPiNHl2gMFgQKF50/iaD0BWg6gVBEIVcDAz7gRE6Wx7kL8+lxeYghf/qZjJMiH737BlQ7EPQOlCh8lqeYfNDcCoHKZy7YT4kVM9PyxKelQ0OzNcxIIXc1x0/LYKlEoZb75Ngwb9AIkhudjUopV93TFjAwPRH8lPRQ6iHXeZxqiHKng7GQIm5vSsZGJ4yxHx6IfCPvegSVJ1Nz30V5NKsHWh8sd2iky8Z+Co+XfqcC80einnW+5xRy8cZV/PkTU1P7HYClrncTWB17Ba+dgztVegl7uFTKeEcFhZFF67eYX6pxiUio2/OwrBnwisMhQw/p671d1TitrYGskNAAj82rr2DrbBnYHgxc6a+roq0JPe/vy9f3Lh0/g9yggQAVP08BycrMXQAAAAASUVORK5CYII=)]"
             >
               John Ghioca
-            </div>
+            </h1>
             <button
               className="block w-7 h-7 cursor-pointer xl:hidden"
               onClick={() => setIsOpen(!isOpen)}
@@ -91,10 +91,10 @@ export default function Home() {
             id="home-header"
             className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8"
           >
-            <h1 className="text-3xl font-serif font-bold text-center mx-0 my-5">
+            <h2 className="text-3xl font-serif font-bold text-center mx-0 my-5">
               HELLO, MY&nbsp;NAME&nbsp;IS
               <span className="text-[#00a0dc] block">JOHN&nbsp;GHIOCA</span>
-            </h1>
+            </h2>
             <p className="text-lg text-balance text-center my-5">
               I&apos;m a web developer using popular libraries, such as{" "}
               <span className="text-[#00a0dc] font-bold">React</span> and{" "}
@@ -148,7 +148,7 @@ export default function Home() {
                   name="name"
                   placeholder="Name"
                   required
-                  className="bg-white text-black w-full indent-2 m-0 px-0 py-1 border-0 rounded-sm"
+                  className="bg-white text-black w-full pl-2 m-0 px-0 py-1 border-0 rounded-sm"
                 />
               </fieldset>
               <fieldset className="mb-4 m-0 p-0 border-0">
@@ -161,7 +161,7 @@ export default function Home() {
                   name="email"
                   placeholder="email@domain.com"
                   required
-                  className="bg-white text-black w-full indent-2 m-0 px-0 py-1 border-0 rounded-sm"
+                  className="bg-white text-black w-full pl-2 m-0 px-0 py-1 border-0 rounded-sm"
                 />
               </fieldset>
               <fieldset className="m-0 p-0 border-0">
@@ -173,7 +173,7 @@ export default function Home() {
                   name="message"
                   placeholder="Enter your message"
                   required
-                  className="bg-white overflow-auto block text-black resize-y w-full indent-2 m-0 px-0 py-1 border-0 rounded-sm md:min-h-20"
+                  className="bg-white overflow-auto block text-black resize-y w-full pl-2 m-0 px-0 py-1 border-0 rounded-sm md:min-h-20"
                 ></textarea>
               </fieldset>
               <fieldset className="m-0 p-0 border-0 md:col-span-2">
