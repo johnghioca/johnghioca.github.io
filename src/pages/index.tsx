@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
+import { Portfolio } from "@/components/templates/portfolio/Portfolio";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,32 +52,32 @@ export default function Home() {
               )}
             </button>
           </div>
-          <nav className="xl:w-1/2">
+          <nav className="xl:w-1/3">
             <ul
               className={`${
                 isOpen ? "max-h-56" : "max-h-0"
-              } overflow-hidden transition-[max-height] duration-300 xl:max-h-none xl:flex`}
+              } overflow-hidden transition-[max-height] duration-300 xl:max-h-none xl:flex xl:justify-between`}
             >
-              <li className="block xl:grow">
+              <li className="block">
                 <a
                   href="#portfolio-header"
-                  className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-2 xl:rounded-sm"
+                  className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-1 xl:rounded-sm xl:hover:bg-transparent xl:focus:bg-transparent xl:hover:text-[#00a0dc] xl:focus:text-[#00a0dc]"
                 >
                   PORTFOLIO
                 </a>
               </li>
-              <li className="block xl:grow">
+              <li className="block">
                 <a
                   href="#about-header"
-                  className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-2 xl:rounded-sm"
+                  className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-1 xl:rounded-sm xl:hover:bg-transparent xl:focus:bg-transparent xl:hover:text-[#00a0dc] xl:focus:text-[#00a0dc]"
                 >
                   ABOUT
                 </a>
               </li>
-              <li className="block xl:grow">
+              <li className="block">
                 <a
                   href="#contact-header"
-                  className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-2 xl:rounded-sm"
+                  className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-1 xl:rounded-sm xl:hover:bg-transparent xl:focus:bg-transparent xl:hover:text-[#00a0dc] xl:focus:text-[#00a0dc]"
                 >
                   CONTACT
                 </a>
@@ -96,19 +97,14 @@ export default function Home() {
               <span className="text-[#00a0dc] block">JOHN&nbsp;GHIOCA</span>
             </h2>
             <p className="text-lg text-balance text-center my-5">
-              I&apos;m a web developer using popular libraries, such as{" "}
-              <span className="text-[#00a0dc] font-bold">React</span> and{" "}
-              <span className="text-[#00a0dc] font-bold">Express.js</span>, to
+              I&apos;m a full-stack web developer using popular libraries, such
+              as <span className="text-[#00a0dc] font-bold">React</span> and{" "}
+              <span className="text-[#00a0dc] font-bold">Express</span>, to
               create websites and apps. Check out some of the companies
               I&apos;ve worked with below.
             </p>
           </section>
-          <section
-            id="portfolio-header"
-            className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8"
-          >
-            <h2 className="font-serif font-bold text-2xl">PORTFOLIO</h2>
-          </section>
+          <Portfolio />
           <section
             id="about-header"
             className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8"
@@ -116,11 +112,11 @@ export default function Home() {
             <h2 className="font-serif font-bold  text-2xl">ABOUT</h2>
             <p className="mx-0 my-4">
               While in college I majored in computer science and minored in
-              mathematics. Currently I am working at an ad agency creating
-              websites that allows the user to experience a site suited for the
-              device they are using. I write valid markup that follows current
-              web standards in order to ensure visitors have access to the
-              content on the page.
+              mathematics. Currently I am a full-stack developer in an ad agency
+              creating websites that allows the user to experience a site suited
+              for the device they are using. I write valid markup that follows
+              current web standards in order to ensure visitors have access to
+              the content on the page.
             </p>
             <p className="mx-0 my-4">
               From mobile to desktop, I can provide an optimized page for any
