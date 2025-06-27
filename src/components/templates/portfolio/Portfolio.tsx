@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSprings, animated, to as interpolate } from "@react-spring/web";
 import { useDrag } from "react-use-gesture";
 
-import "./styles.css";
+import styles from "./styles.module.css";
 
 const Portfolio = () => {
   const commonImgPath = "/images/";
@@ -40,23 +40,6 @@ const Portfolio = () => {
     `perspective(1500px) rotateX(30deg) rotateY(${
       r / 10
     }deg) rotateZ(${r}deg) scale(${s})`;
-  const shuffle = (array: string[]) => {
-    let currentIndex = array.length;
-
-    // While there remain elements to shuffle...
-    while (currentIndex != 0) {
-      // Pick a remaining element...
-      const randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex],
-        array[currentIndex],
-      ];
-    }
-  };
-  shuffle(cards);
 
   // This is being used down there in the view, it interpolates rotation and scale into a css transform
   const [gone] = useState(() => new Set()); // The set flags all the cards that are flicked out
@@ -99,19 +82,18 @@ const Portfolio = () => {
     >
       <h2 className="font-serif font-bold text-2xl">PORTFOLIO</h2>
 
-      <div className="container my-4">
+      <div className={styles.container}>
         {props.map(({ x, y, rot, scale }, i) => (
-          <animated.div className="deck" key={i} style={{ x, y }}>
+          <animated.div className={styles.deck} key={i} style={{ x, y }}>
             {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
-            <div>
-              <animated.div
-                {...bind(i)}
-                style={{
-                  transform: interpolate([rot, scale], trans),
-                  backgroundImage: `url(${commonImgPath}${cards[i]})`,
-                }}
-              />
-            </div>
+            <animated.div
+              className={styles.content}
+              {...bind(i)}
+              style={{
+                transform: interpolate([rot, scale], trans),
+                backgroundImage: `url(${commonImgPath}${cards[i]})`,
+              }}
+            />
           </animated.div>
         ))}
       </div>
