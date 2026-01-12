@@ -5,6 +5,11 @@ import { Portfolio } from "@/components/templates/portfolio/Portfolio";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const currentYear = new Date().getFullYear();
+  const handleClick = () => {
+    if (window.innerWidth < 1280) {
+      setIsOpen(!isOpen);
+    }
+  };
 
   return (
     <div className="bg-gray-600 text-white font-sans">
@@ -62,7 +67,7 @@ export default function Home() {
                 <a
                   href="#home"
                   className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-1 xl:rounded-sm xl:hover:bg-transparent xl:focus:bg-transparent xl:hover:text-[#00a0dc] xl:focus:text-[#00a0dc]"
-                  onClick={() => setIsOpen(!isOpen)}
+                  onClick={handleClick}
                 >
                   HOME
                 </a>
@@ -71,7 +76,7 @@ export default function Home() {
                 <a
                   href="#portfolio"
                   className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-1 xl:rounded-sm xl:hover:bg-transparent xl:focus:bg-transparent xl:hover:text-[#00a0dc] xl:focus:text-[#00a0dc]"
-                  onClick={() => setIsOpen(!isOpen)}
+                  onClick={handleClick}
                 >
                   PORTFOLIO
                 </a>
@@ -80,7 +85,7 @@ export default function Home() {
                 <a
                   href="#about"
                   className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-1 xl:rounded-sm xl:hover:bg-transparent xl:focus:bg-transparent xl:hover:text-[#00a0dc] xl:focus:text-[#00a0dc]"
-                  onClick={() => setIsOpen(!isOpen)}
+                  onClick={handleClick}
                 >
                   ABOUT
                 </a>
@@ -89,7 +94,7 @@ export default function Home() {
                 <a
                   href="#contact"
                   className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-1 xl:rounded-sm xl:hover:bg-transparent xl:focus:bg-transparent xl:hover:text-[#00a0dc] xl:focus:text-[#00a0dc]"
-                  onClick={() => setIsOpen(!isOpen)}
+                  onClick={handleClick}
                 >
                   CONTACT
                 </a>
