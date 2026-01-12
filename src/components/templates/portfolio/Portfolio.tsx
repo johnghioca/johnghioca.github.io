@@ -96,7 +96,7 @@ const Portfolio = () => {
 
       <div className={styles.container}>
         {props.map(({ x, y, rot, scale }, i) => (
-          <animated.div className={styles.deck} key={i} style={{ x, y }}>
+          <animated.div className={styles.deck} key={cards[i]} style={{ x, y }}>
             {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
             <animated.div
               className={styles.content}
