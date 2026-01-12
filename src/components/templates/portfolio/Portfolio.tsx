@@ -89,8 +89,8 @@ const Portfolio = () => {
 
   return (
     <section
-      id="about-header"
-      className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8 relative overflow-hidden h-[500px]"
+      id="portfolio"
+      className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8 relative overflow-hidden h-[500px] scroll-mt-30 md:scroll-mt-34"
     >
       <h2 className="font-serif font-bold text-2xl">PORTFOLIO</h2>
 

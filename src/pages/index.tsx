@@ -5,13 +5,18 @@ import { Portfolio } from "@/components/templates/portfolio/Portfolio";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const currentYear = new Date().getFullYear();
+  const handleClick = () => {
+    if (typeof window !== "undefined" && window.innerWidth < 1280) {
+      setIsOpen(false);
+    }
+  };
 
   return (
     <div className="bg-gray-600 text-white font-sans">
       <Head>
         <title>John Ghioca | Portfolio</title>
       </Head>
-      <header className="bg-black">
+      <header className="bg-black fixed top-0 left-0 right-0 z-10">
         <div className="xl:max-w-6xl xl:mx-auto xl:flex xl:items-center xl:justify-between">
           <div className="h-16 flex items-center justify-between mx-5 md:mx-12 xl:mx-0">
             <h1
@@ -52,7 +57,7 @@ export default function Home() {
               )}
             </button>
           </div>
-          <nav className="xl:w-1/3">
+          <nav className="xl:w-5/12">
             <ul
               className={`${
                 isOpen ? "max-h-56" : "max-h-0"
@@ -60,24 +65,36 @@ export default function Home() {
             >
               <li className="block">
                 <a
-                  href="#portfolio-header"
+                  href="#home"
                   className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-1 xl:rounded-sm xl:hover:bg-transparent xl:focus:bg-transparent xl:hover:text-[#00a0dc] xl:focus:text-[#00a0dc]"
+                  onClick={handleClick}
+                >
+                  HOME
+                </a>
+              </li>
+              <li className="block">
+                <a
+                  href="#portfolio"
+                  className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-1 xl:rounded-sm xl:hover:bg-transparent xl:focus:bg-transparent xl:hover:text-[#00a0dc] xl:focus:text-[#00a0dc]"
+                  onClick={handleClick}
                 >
                   PORTFOLIO
                 </a>
               </li>
               <li className="block">
                 <a
-                  href="#about-header"
+                  href="#about"
                   className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-1 xl:rounded-sm xl:hover:bg-transparent xl:focus:bg-transparent xl:hover:text-[#00a0dc] xl:focus:text-[#00a0dc]"
+                  onClick={handleClick}
                 >
                   ABOUT
                 </a>
               </li>
               <li className="block">
                 <a
-                  href="#contact-header"
+                  href="#contact"
                   className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-1 xl:rounded-sm xl:hover:bg-transparent xl:focus:bg-transparent xl:hover:text-[#00a0dc] xl:focus:text-[#00a0dc]"
+                  onClick={handleClick}
                 >
                   CONTACT
                 </a>
@@ -87,10 +104,10 @@ export default function Home() {
         </div>
       </header>
       <main>
-        <div className="mx-5 md:mx-12 xl:max-w-6xl xl:mx-auto">
+        <div className="overflow-hidden mx-5 md:mx-12 xl:max-w-6xl xl:mx-auto">
           <section
-            id="home-header"
-            className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8"
+            id="home"
+            className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8 scroll-mt-30 md:scroll-mt-34"
           >
             <h2 className="text-3xl font-serif font-bold text-center text-balance mx-0 my-5">
               HELLO, MY NAME IS{" "}
@@ -106,8 +123,8 @@ export default function Home() {
           </section>
           <Portfolio />
           <section
-            id="about-header"
-            className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8"
+            id="about"
+            className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8 scroll-mt-30 md:scroll-mt-34"
           >
             <h2 className="font-serif font-bold text-2xl">ABOUT</h2>
             <p className="mx-0 my-4">
@@ -125,8 +142,8 @@ export default function Home() {
             </p>
           </section>
           <section
-            id="contact-header"
-            className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8"
+            id="contact"
+            className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8 scroll-mt-30 md:scroll-mt-34"
           >
             <h2 className="font-serif font-bold text-2xl">CONTACT</h2>
             <form
