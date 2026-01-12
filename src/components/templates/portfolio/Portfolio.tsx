@@ -65,12 +65,18 @@ const Portfolio = () => {
         }
         const rot = mx / 100 + (isGone ? dir * 10 * velocity : 0); // How much the card tilts, flicking it harder makes it rotate faster
         const scale = down ? 1.1 : 1; // Active cards lift up a bit
+        let tension = 500;
+        if (down) {
+          tension = 800;
+        } else if (isGone) {
+          tension = 200;
+        }
         return {
           x,
           rot,
           scale,
           delay: undefined,
-          config: { friction: 50, tension: down ? 800 : isGone ? 200 : 500 },
+          config: { friction: 50, tension },
         };
       });
       if (!down && gone.size === cards.length)
