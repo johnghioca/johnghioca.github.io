@@ -92,9 +92,9 @@ export default function Home() {
             id="home-header"
             className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8"
           >
-            <h2 className="text-3xl font-serif font-bold text-center mx-0 my-5">
-              HELLO, MY&nbsp;NAME&nbsp;IS
-              <span className="text-[#00a0dc] block">JOHN&nbsp;GHIOCA</span>
+            <h2 className="text-3xl font-serif font-bold text-center text-balance mx-0 my-5">
+              HELLO, MY NAME IS{" "}
+              <span className="text-[#00a0dc]">JOHN GHIOCA</span>
             </h2>
             <p className="text-lg text-balance text-center my-5">
               I&apos;m a full-stack web developer using popular libraries, such
@@ -109,7 +109,7 @@ export default function Home() {
             id="about-header"
             className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8"
           >
-            <h2 className="font-serif font-bold  text-2xl">ABOUT</h2>
+            <h2 className="font-serif font-bold text-2xl">ABOUT</h2>
             <p className="mx-0 my-4">
               While in college I majored in computer science and minored in
               mathematics. Currently I am a full-stack developer in an ad agency
@@ -130,7 +130,7 @@ export default function Home() {
           >
             <h2 className="font-serif font-bold text-2xl">CONTACT</h2>
             <form
-              className="m-0 px-0 pt-4 md:grid md:grid-cols-2 md:gap-x-10  md:gap-y-2"
+              className="m-0 px-0 pt-4 md:grid md:grid-cols-2 md:gap-x-10 md:gap-y-2"
               action="https://formspree.io/f/mnqwvegb"
               method="post"
             >
