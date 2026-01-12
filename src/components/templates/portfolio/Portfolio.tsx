@@ -56,15 +56,27 @@ const Portfolio = () => {
       api.start((i) => {
         if (index !== i) return; // We're only interested in changing spring-data for the current spring
         const isGone = gone.has(index);
-        const x = isGone ? (150 + window.innerWidth) * dir : down ? mx : 0; // When a card is gone it flys out left or right, otherwise goes back to zero
+        // When a card is gone it flys out left or right, otherwise goes back to zero
+        let x = 0;
+        if (isGone) {
+          x = (150 + window.innerWidth) * dir;
+        } else if (down) {
+          x = mx;
+        }
         const rot = mx / 100 + (isGone ? dir * 10 * velocity : 0); // How much the card tilts, flicking it harder makes it rotate faster
         const scale = down ? 1.1 : 1; // Active cards lift up a bit
+        let tension = 500;
+        if (down) {
+          tension = 800;
+        } else if (isGone) {
+          tension = 200;
+        }
         return {
           x,
           rot,
           scale,
           delay: undefined,
-          config: { friction: 50, tension: down ? 800 : isGone ? 200 : 500 },
+          config: { friction: 50, tension },
         };
       });
       if (!down && gone.size === cards.length)
@@ -84,7 +96,7 @@ const Portfolio = () => {
 
       <div className={styles.container}>
         {props.map(({ x, y, rot, scale }, i) => (
-          <animated.div className={styles.deck} key={i} style={{ x, y }}>
+          <animated.div className={styles.deck} key={cards[i]} style={{ x, y }}>
             {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
             <animated.div
               className={styles.content}
