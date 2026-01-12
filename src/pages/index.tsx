@@ -102,7 +102,7 @@ export default function Home() {
         <div className="overflow-hidden mx-5 md:mx-12 xl:max-w-6xl xl:mx-auto">
           <section
             id="home"
-            className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8 scroll-mt-20 md:scroll-mt-24"
+            className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8 scroll-mt-30 md:scroll-mt-34"
           >
             <h2 className="text-3xl font-serif font-bold text-center text-balance mx-0 my-5">
               HELLO, MY NAME IS{" "}
