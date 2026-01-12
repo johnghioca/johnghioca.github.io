@@ -42,8 +42,8 @@ export default function Home() {
                   viewBox="0 0 100 100"
                   overflow="visible"
                   stroke="white"
-                  stroke-width="10"
-                  stroke-linecap="round"
+                  strokeWidth="10"
+                  strokeLinecap="round"
                   aria-label="Close mobile menu"
                 >
                   <line x2="100" y2="100" />
