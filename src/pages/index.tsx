@@ -6,8 +6,8 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const currentYear = new Date().getFullYear();
   const handleClick = () => {
-    if (window.innerWidth < 1280) {
-      setIsOpen(!isOpen);
+    if (typeof window !== "undefined" && window.innerWidth < 1280) {
+      setIsOpen(false);
     }
   };
 
