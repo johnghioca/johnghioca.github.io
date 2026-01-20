@@ -4,33 +4,37 @@ import { useDrag } from "react-use-gesture";
 
 import styles from "./styles.module.css";
 
+const CARDS = [
+  "url(/images/chase.svg)",
+  "url(/images/marriott.svg)",
+  "url(/images/mondelez.svg)",
+  "url(/images/verizon.svg)",
+  "url(/images/starbucks.svg)",
+  "url(/images/google.svg)",
+  "url(/images/maybelline.svg)",
+  "url(/images/murad.svg)",
+  "url(/images/us-soccer.svg)",
+  "url(/images/cruise.svg)",
+  "url(/images/palms.svg)",
+  "url(/images/nike.svg)",
+  "url(/images/hss.svg)",
+  "url(/images/ibm.svg)",
+  "url(/images/audi.svg)",
+  "url(/images/sunrun.svg)",
+  "url(/images/mayo.svg)",
+  "url(/images/chick-fil-a.svg)",
+  "url(/images/longbranch.svg)",
+  "url(/images/capital-one.svg)",
+  "url(/images/realberry.svg)",
+];
+
 const Portfolio = () => {
-  const commonImgPath = "/images/";
-  const cards = [
-    "chase.svg",
-    "marriott.svg",
-    "mondelez.svg",
-    "verizon.svg",
-    "starbucks.svg",
-    "google.svg",
-    "maybelline.svg",
-    "murad.svg",
-    "us-soccer.svg",
-    "cruise.svg",
-    "palms.svg",
-    "nike.svg",
-    "hss.svg",
-    "ibm.svg",
-    "audi.svg",
-    "sunrun.svg",
-    "mayo.svg",
-    "chick-fil-a.svg",
-    "longbranch.svg",
-    "capital-one.svg",
-  ];
+  const styledDeck = styles.deck;
+  const styledContent = styles.content;
+  
   const to = (i: number) => ({
     x: 0,
-    y: i * -2,
+    y: i * -1,
     scale: 1,
     rot: -10 + Math.random() * 20,
     delay: i * 100,
@@ -42,8 +46,8 @@ const Portfolio = () => {
     }deg) rotateZ(${r}deg) scale(${s})`;
 
   // This is being used down there in the view, it interpolates rotation and scale into a css transform
-  const [gone] = useState(() => new Set()); // The set flags all the cards that are flicked out
-  const [props, api] = useSprings(cards.length, (i) => ({
+  const [gone] = useState(() => new Set()); // The set flags all the CARDS that are flicked out
+  const [props, api] = useSprings(CARDS.length, (i) => ({
     ...to(i),
     from: from(),
   })); // Create a bunch of springs using the helpers above
@@ -64,7 +68,7 @@ const Portfolio = () => {
           x = mx;
         }
         const rot = mx / 100 + (isGone ? dir * 10 * velocity : 0); // How much the card tilts, flicking it harder makes it rotate faster
-        const scale = down ? 1.1 : 1; // Active cards lift up a bit
+        const scale = down ? 1.1 : 1; // Active CARDS lift up a bit
         let tension = 500;
         if (down) {
           tension = 800;
@@ -79,7 +83,7 @@ const Portfolio = () => {
           config: { friction: 50, tension },
         };
       });
-      if (!down && gone.size === cards.length)
+      if (!down && gone.size === CARDS.length)
         setTimeout(() => {
           gone.clear();
           api.start((i) => to(i));
@@ -96,14 +100,14 @@ const Portfolio = () => {
 
       <div className={styles.container}>
         {props.map(({ x, y, rot, scale }, i) => (
-          <animated.div className={styles.deck} key={cards[i]} style={{ x, y }}>
+          <animated.div className={styledDeck} key={CARDS[i]} style={{ x, y }}>
             {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
             <animated.div
-              className={styles.content}
+              className={styledContent}
               {...bind(i)}
               style={{
                 transform: interpolate([rot, scale], trans),
-                backgroundImage: `url(${commonImgPath}${cards[i]})`,
+                backgroundImage: CARDS[i],
               }}
             />
           </animated.div>
