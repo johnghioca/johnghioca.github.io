@@ -9,8 +9,6 @@
 
 .deck {
   position: absolute;
-  width: 300px;
-  height: 200px;
   will-change: transform;
   display: flex;
   align-items: center;
@@ -23,10 +21,8 @@
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 45vh;
-  max-width: 150px;
-  height: 85vh;
-  max-height: 285px;
+  width: 250px;
+  height: 350px;
   will-change: transform;
   border-radius: 10px;
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
