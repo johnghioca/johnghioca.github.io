@@ -4,29 +4,30 @@ import { useDrag } from "react-use-gesture";
 
 import styles from "./styles.module.css";
 
-const CARDS = [
-  "url(/images/chase.svg)",
-  "url(/images/marriott.svg)",
-  "url(/images/mondelez.svg)",
-  "url(/images/verizon.svg)",
-  "url(/images/starbucks.svg)",
-  "url(/images/google.svg)",
-  "url(/images/maybelline.svg)",
-  "url(/images/murad.svg)",
-  "url(/images/us-soccer.svg)",
-  "url(/images/cruise.svg)",
-  "url(/images/palms.svg)",
-  "url(/images/nike.svg)",
-  "url(/images/hss.svg)",
-  "url(/images/ibm.svg)",
-  "url(/images/audi.svg)",
-  "url(/images/sunrun.svg)",
-  "url(/images/mayo.svg)",
-  "url(/images/chick-fil-a.svg)",
-  "url(/images/longbranch.svg)",
-  "url(/images/capital-one.svg)",
-  "url(/images/realberry.svg)",
+const CARD_NAMES = [
+  "chase",
+  "marriott",
+  "mondelez",
+  "verizon",
+  "starbucks",
+  "google",
+  "maybelline",
+  "murad",
+  "us-soccer",
+  "cruise",
+  "palms",
+  "nike",
+  "hss",
+  "ibm",
+  "audi",
+  "sunrun",
+  "mayo",
+  "chick-fil-a",
+  "longbranch",
+  "capital-one",
+  "realberry",
 ];
+const CARDS = CARD_NAMES.map(name => `url(/images/${name}.svg)`);
 
 const Portfolio = () => {
   const styledDeck = styles.deck;
@@ -100,11 +101,12 @@ const Portfolio = () => {
 
       <div className={styles.container}>
         {props.map(({ x, y, rot, scale }, i) => (
-          <animated.div className={styledDeck} key={CARDS[i]} style={{ x, y }}>
+          <animated.div className={styledDeck} key={CARD_NAMES[i]} style={{ x, y }}>
             {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
             <animated.div
               className={styledContent}
               {...bind(i)}
+              aria-label={CARD_NAMES[i]}
               style={{
                 transform: interpolate([rot, scale], trans),
                 backgroundImage: CARDS[i],
