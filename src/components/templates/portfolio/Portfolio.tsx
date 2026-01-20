@@ -27,7 +27,13 @@ const CARD_NAMES = [
   "capital-one",
   "realberry",
 ];
-const CARDS = CARD_NAMES.map(name => `url(/images/${name}.svg)`);
+
+const CARDS: string[] = [];
+const LABELS: string[] = [];
+for (const name of CARD_NAMES) {
+  CARDS.push(`url(/images/${name}.svg)`);
+  LABELS.push(`${name.replaceAll('-', ' ')} portfolio card`);
+}
 
 const Portfolio = () => {
   const styledDeck = styles.deck;
@@ -106,7 +112,7 @@ const Portfolio = () => {
             <animated.div
               className={styledContent}
               {...bind(i)}
-              aria-label={CARD_NAMES[i]}
+              aria-label={LABELS[i]}
               style={{
                 transform: interpolate([rot, scale], trans),
                 backgroundImage: CARDS[i],
