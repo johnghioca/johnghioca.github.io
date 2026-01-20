@@ -27,10 +27,11 @@ const Portfolio = () => {
     "chick-fil-a.svg",
     "longbranch.svg",
     "capital-one.svg",
+    "realberry.svg"
   ];
   const to = (i: number) => ({
     x: 0,
-    y: i * -2,
+    y: i * -1,
     scale: 1,
     rot: -10 + Math.random() * 20,
     delay: i * 100,
