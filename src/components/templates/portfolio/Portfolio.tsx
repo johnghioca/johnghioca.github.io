@@ -112,6 +112,7 @@ const Portfolio = () => {
             <animated.div
               className={styledContent}
               {...bind(i)}
+              role="img"
               aria-label={LABELS[i]}
               style={{
                 transform: interpolate([rot, scale], trans),
