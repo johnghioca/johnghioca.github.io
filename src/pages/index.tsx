@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
+import { A } from "@/components/atoms/A";
 import { Portfolio } from "@/components/templates/portfolio/Portfolio";
 
 export default function Home() {
@@ -27,14 +28,12 @@ export default function Home() {
 						</h1>
 						<button
 							className="block w-7 h-7 cursor-pointer xl:hidden"
+							type="button"
 							onClick={() => setIsOpen(!isOpen)}
 						>
 							{!isOpen && (
-								<svg
-									viewBox="0 0 100 100"
-									fill="white"
-									aria-label="Open mobile menu"
-								>
+								<svg viewBox="0 0 100 100" fill="white">
+									<title>Open mobile menu</title>
 									<rect y="15" width="100" height="10" rx="8"></rect>
 									<rect y="45" width="100" height="10" rx="8"></rect>
 									<rect y="75" width="100" height="10" rx="8"></rect>
@@ -49,8 +48,8 @@ export default function Home() {
 									stroke="white"
 									strokeWidth="10"
 									strokeLinecap="round"
-									aria-label="Close mobile menu"
 								>
+									<title>Close mobile menu</title>
 									<line x2="100" y2="100" />
 									<line x1="100" y2="100" />
 								</svg>
@@ -64,40 +63,24 @@ export default function Home() {
 							} overflow-hidden transition-[max-height] duration-300 xl:max-h-none xl:flex xl:justify-between`}
 						>
 							<li className="block">
-								<a
-									href="#home"
-									className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-1 xl:rounded-sm xl:hover:bg-transparent xl:focus:bg-transparent xl:hover:text-[#00a0dc] xl:focus:text-[#00a0dc]"
-									onClick={handleClick}
-								>
+								<A href="#home" onClick={handleClick}>
 									HOME
-								</a>
+								</A>
 							</li>
 							<li className="block">
-								<a
-									href="#portfolio"
-									className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-1 xl:rounded-sm xl:hover:bg-transparent xl:focus:bg-transparent xl:hover:text-[#00a0dc] xl:focus:text-[#00a0dc]"
-									onClick={handleClick}
-								>
+								<A href="#portfolio" onClick={handleClick}>
 									PORTFOLIO
-								</a>
+								</A>
 							</li>
 							<li className="block">
-								<a
-									href="#about"
-									className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-1 xl:rounded-sm xl:hover:bg-transparent xl:focus:bg-transparent xl:hover:text-[#00a0dc] xl:focus:text-[#00a0dc]"
-									onClick={handleClick}
-								>
+								<A href="#about" onClick={handleClick}>
 									ABOUT
-								</a>
+								</A>
 							</li>
 							<li className="block">
-								<a
-									href="#contact"
-									className="block bg-[#069] hover:bg-[#00a0dc] focus:bg-[#00a0dc] h-12 leading-12 font-bold text-center transition-[background] duration-600 border-b-black border-b border-solid xl:bg-transparent xl:border-0 xl:h-16 xl:leading-16 -outline-offset-1 xl:rounded-sm xl:hover:bg-transparent xl:focus:bg-transparent xl:hover:text-[#00a0dc] xl:focus:text-[#00a0dc]"
-									onClick={handleClick}
-								>
+								<A href="#contact" onClick={handleClick}>
 									CONTACT
-								</a>
+								</A>
 							</li>
 						</ul>
 					</nav>
