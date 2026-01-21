@@ -151,7 +151,7 @@ export default function Home() {
               action="https://formspree.io/f/mnqwvegb"
               method="post"
             >
-              <fieldset className="mb-4 m-0 p-0 border-0">
+              <div className="mb-4 m-0 p-0 border-0">
                 <label htmlFor="name" className="block font-bold">
                   Your Name
                 </label>
@@ -163,8 +163,8 @@ export default function Home() {
                   required
                   className="bg-white text-black w-full pl-2 m-0 px-0 py-1 border-0 rounded-sm"
                 />
-              </fieldset>
-              <fieldset className="mb-4 m-0 p-0 border-0">
+              </div>
+              <div className="mb-4 m-0 p-0 border-0">
                 <label htmlFor="email" className="block font-bold">
                   Your Email Address
                 </label>
@@ -176,8 +176,8 @@ export default function Home() {
                   required
                   className="bg-white text-black w-full pl-2 m-0 px-0 py-1 border-0 rounded-sm"
                 />
-              </fieldset>
-              <fieldset className="m-0 p-0 border-0">
+              </div>
+              <div className="m-0 p-0 border-0">
                 <label htmlFor="message" className="block font-bold">
                   Your Message
                 </label>
@@ -188,8 +188,8 @@ export default function Home() {
                   required
                   className="bg-white overflow-auto block text-black resize-y w-full pl-2 m-0 px-0 py-1 border-0 rounded-sm md:min-h-20"
                 ></textarea>
-              </fieldset>
-              <fieldset className="m-0 p-0 border-0 md:col-span-2">
+              </div>
+              <div className="m-0 p-0 border-0 md:col-span-2">
                 <p className="mx-0 mb-4">
                   <small>*All fields are required.</small>
                 </p>
@@ -199,7 +199,7 @@ export default function Home() {
                 >
                   Send
                 </button>
-              </fieldset>
+              </div>
             </form>
           </section>
         </div>
