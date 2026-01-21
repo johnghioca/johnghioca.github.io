@@ -5,7 +5,7 @@ import { useDrag } from "react-use-gesture";
 import styles from "./styles.module.css";
 
 const CARD_NAMES = [
-"chase",
+	"chase",
 	"marriott",
 	"mondelez",
 	"verizon",

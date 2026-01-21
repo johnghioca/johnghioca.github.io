@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import { A } from "@/components/atoms/A";
-import { Portfolio } from "@/components/templates/portfolio/Portfolio";
+import { Portfolio } from "@/components/templates/Portfolio";
 
 export default function Home() {
 	const [isOpen, setIsOpen] = useState(false);
