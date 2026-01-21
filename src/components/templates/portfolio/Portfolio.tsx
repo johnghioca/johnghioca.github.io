@@ -1,5 +1,5 @@
+import { animated, to as interpolate, useSprings } from "@react-spring/web";
 import { useState } from "react";
-import { useSprings, animated, to as interpolate } from "@react-spring/web";
 import { useDrag } from "react-use-gesture";
 
 import styles from "./styles.module.css";
