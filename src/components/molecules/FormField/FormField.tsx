@@ -61,4 +61,9 @@ const FormField = ({
 	);
 };
 
-export { FormField, type FormFieldProps };
+export {
+	FormField,
+	type FormFieldInputProps,
+	type FormFieldProps,
+	type FormFieldTextareaProps,
+};

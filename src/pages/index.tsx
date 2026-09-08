@@ -1,13 +1,14 @@
 import Head from "next/head";
 import { HomePage } from "@/components/templates/HomePage";
+import { homeContent } from "@/content/home";
 
 export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>John Ghioca | Portfolio</title>
+				<title>{homeContent.documentTitle}</title>
 			</Head>
-			<HomePage />
+			<HomePage content={homeContent} />
 		</>
 	);
 }
