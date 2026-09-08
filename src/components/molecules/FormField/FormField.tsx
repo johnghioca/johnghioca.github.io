@@ -33,8 +33,10 @@ const FormField = ({
 	className = "",
 	...otherProps
 }: FormFieldProps) => {
-	const as = "as" in otherProps && otherProps.as === "textarea" ? "textarea" : "input";
-	const type = as === "input" && "type" in otherProps ? otherProps.type : "text";
+	const as =
+		"as" in otherProps && otherProps.as === "textarea" ? "textarea" : "input";
+	const type =
+		as === "input" && "type" in otherProps ? otherProps.type : "text";
 
 	return (
 		<div className={twMerge("m-0 p-0 border-0", className)}>
