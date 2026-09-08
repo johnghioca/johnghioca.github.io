@@ -6,38 +6,18 @@ import { Section } from "@/components/atoms/Section";
 
 import styles from "./styles.module.css";
 
-const CARD_NAMES = [
-	"chase",
-	"marriott",
-	"mondelez",
-	"verizon",
-	"starbucks",
-	"google",
-	"maybelline",
-	"murad",
-	"us-soccer",
-	"cruise",
-	"palms",
-	"nike",
-	"hss",
-	"ibm",
-	"audi",
-	"sunrun",
-	"mayo",
-	"chick-fil-a",
-	"campari-group",
-	"capital-one",
-	"realberry",
-];
+type PortfolioProps = {
+	id: string;
+	title: string;
+	cards: string[];
+};
 
-const CARDS: string[] = [];
-const LABELS: string[] = [];
-for (const name of CARD_NAMES) {
-	CARDS.push(`url(/images/${name}.svg)`);
-	LABELS.push(`${name.replaceAll("-", " ")} portfolio card`);
-}
+const Portfolio = ({ id, title, cards }: PortfolioProps) => {
+	const cardImages = cards.map((name) => `url(/images/${name}.svg)`);
+	const cardLabels = cards.map(
+		(name) => `${name.replaceAll("-", " ")} portfolio card`,
+	);
 
-const Portfolio = () => {
 	const styledDeck = styles.deck;
 	const styledContent = styles.content;
 
@@ -57,7 +37,7 @@ const Portfolio = () => {
 
 	// This is being used down there in the view, it interpolates rotation and scale into a css transform
 	const [gone] = useState(() => new Set()); // The set flags all the CARDS that are flicked out
-	const [props, api] = useSprings(CARDS.length, (i) => ({
+	const [props, api] = useSprings(cards.length, (i) => ({
 		...to(i),
 		from: from(),
 	})); // Create a bunch of springs using the helpers above
@@ -93,7 +73,7 @@ const Portfolio = () => {
 					config: { friction: 50, tension },
 				};
 			});
-			if (!down && gone.size === CARDS.length)
+			if (!down && gone.size === cards.length)
 				setTimeout(() => {
 					gone.clear();
 					api.start((i) => to(i));
@@ -102,25 +82,21 @@ const Portfolio = () => {
 	);
 
 	return (
-		<Section id="portfolio" className="relative overflow-hidden h-[500px]">
-			<Heading>PORTFOLIO</Heading>
+		<Section id={id} className="relative overflow-hidden h-[500px]">
+			<Heading>{title}</Heading>
 
 			<div className={styles.container}>
 				{props.map(({ x, y, rot, scale }, i) => (
-					<animated.div
-						className={styledDeck}
-						key={CARD_NAMES[i]}
-						style={{ x, y }}
-					>
+					<animated.div className={styledDeck} key={cards[i]} style={{ x, y }}>
 						{/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
 						<animated.div
 							className={styledContent}
 							{...bind(i)}
 							role="img"
-							aria-label={LABELS[i]}
+							aria-label={cardLabels[i]}
 							style={{
 								transform: interpolate([rot, scale], trans),
-								backgroundImage: CARDS[i],
+								backgroundImage: cardImages[i],
 							}}
 						/>
 					</animated.div>
@@ -130,4 +106,4 @@ const Portfolio = () => {
 	);
 };
 
-export { Portfolio };
+export { Portfolio, type PortfolioProps };

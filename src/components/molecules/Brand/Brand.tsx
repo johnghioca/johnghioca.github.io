@@ -1,10 +1,10 @@
 import { Logo } from "@/components/atoms/Logo";
 
 type BrandProps = {
-	children?: React.ReactNode;
+	children: React.ReactNode;
 };
 
-const Brand = ({ children = "John Ghioca" }: BrandProps) => {
+const Brand = ({ children }: BrandProps) => {
 	return <Logo>{children}</Logo>;
 };
 
