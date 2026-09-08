@@ -1,6 +1,8 @@
 import { animated, to as interpolate, useSprings } from "@react-spring/web";
 import { useState } from "react";
 import { useDrag } from "react-use-gesture";
+import { Heading } from "@/components/atoms/Heading";
+import { Section } from "@/components/atoms/Section";
 
 import styles from "./styles.module.css";
 
@@ -43,7 +45,8 @@ const Portfolio = () => {
 		x: 0,
 		y: i * -1,
 		scale: 1,
-		rot: -10 + Math.random() * 20,
+		// Deterministic tilt in [-10, 10) from card index (decorative only)
+		rot: -10 + ((i * 37) % 20),
 		delay: i * 100,
 	});
 	const from = () => ({ x: 0, rot: 0, scale: 1.5, y: -1000 });
@@ -99,11 +102,8 @@ const Portfolio = () => {
 	);
 
 	return (
-		<section
-			id="portfolio"
-			className="bg-black mt-14 p-4 rounded-lg md:mt-18 md:p-8 relative overflow-hidden h-[500px] scroll-mt-30 md:scroll-mt-34"
-		>
-			<h2 className="font-serif font-bold text-2xl">PORTFOLIO</h2>
+		<Section id="portfolio" className="relative overflow-hidden h-[500px]">
+			<Heading>PORTFOLIO</Heading>
 
 			<div className={styles.container}>
 				{props.map(({ x, y, rot, scale }, i) => (
@@ -126,7 +126,7 @@ const Portfolio = () => {
 					</animated.div>
 				))}
 			</div>
-		</section>
+		</Section>
 	);
 };
 
