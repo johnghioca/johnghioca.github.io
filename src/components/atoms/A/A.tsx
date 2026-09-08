@@ -2,7 +2,7 @@ import { twMerge } from "tailwind-merge";
 
 type AProps = React.ComponentPropsWithoutRef<"a">;
 
-const A: React.FC<AProps> = ({ className = "", children, ...props }) => {
+const A = ({ className = "", children, ...otherProps }: AProps) => {
 	return (
 		<a
 			className={twMerge(
@@ -14,7 +14,7 @@ const A: React.FC<AProps> = ({ className = "", children, ...props }) => {
 				"xl:h-16 xl:leading-16 xl:rounded-sm xl:border-0", // xl styles
 				className,
 			)}
-			{...props}
+			{...otherProps}
 		>
 			{children}
 		</a>
