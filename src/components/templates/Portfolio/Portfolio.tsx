@@ -23,7 +23,7 @@ const CARD_NAMES = [
 	"sunrun",
 	"mayo",
 	"chick-fil-a",
-	"longbranch",
+	"campari-group",
 	"capital-one",
 	"realberry",
 ];
