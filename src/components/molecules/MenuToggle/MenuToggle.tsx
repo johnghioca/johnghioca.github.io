@@ -13,6 +13,8 @@ const MenuToggle = ({ isOpen, onToggle, className = "" }: MenuToggleProps) => {
 		<button
 			className={twMerge("block w-7 h-7 cursor-pointer xl:hidden", className)}
 			type="button"
+			aria-label={isOpen ? "Close mobile menu" : "Open mobile menu"}
+			aria-expanded={isOpen}
 			onClick={onToggle}
 		>
 			{isOpen ? <IconClose /> : <IconMenu />}
