@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { expect, test } from "vitest";
-import { Logo } from "./Logo";
+import { Brand } from "./Brand";
 
-test("Logo component renders", () => {
-	render(<Logo className="extra">John Ghioca</Logo>);
+test("Brand renders logo children", () => {
+	render(<Brand>John Ghioca</Brand>);
 	expect(
 		screen.getByRole("heading", { level: 1, name: "John Ghioca" }),
 	).toBeDefined();
