@@ -12,8 +12,8 @@ const AboutSection = ({ id, title, paragraphs }: AboutSectionProps) => {
 	return (
 		<Section id={id}>
 			<Heading>{title}</Heading>
-			{paragraphs.map((paragraph, index) => (
-				<Paragraph key={`${id}-paragraph-${index}`} className="my-4">
+			{paragraphs.map((paragraph) => (
+				<Paragraph key={`${id}-${paragraph}`} className="my-4">
 					{paragraph}
 				</Paragraph>
 			))}

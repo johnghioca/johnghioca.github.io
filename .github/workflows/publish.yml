@@ -25,6 +25,9 @@ jobs:
       - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
         uses: ./.github/workflows/setup-node
 
+      - name: Check with Biome 🧹
+        run: npm run biome:ci
+
       - name: Setup Pages ⚙️
         uses: actions/configure-pages@v5
         with:
