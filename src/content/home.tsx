@@ -69,7 +69,7 @@ const homeContent: HomeContent = {
 				high-performance websites and applications using the{" "}
 				<span className="text-[#00a0dc]">JAMstack</span>, including Next.js,
 				React, TypeScript, Supabase, and headless CMS platforms.
-				I use these technologies to create fast, scalable, and engaging digital experiences. 
+				I use these technologies to create fast, scalable, and engaging digital experiences.
 				Check out some of the companies I&apos;ve had the opportunity to work with below.
 			</>
 		),
