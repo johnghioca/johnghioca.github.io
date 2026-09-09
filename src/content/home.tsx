@@ -65,11 +65,12 @@ const homeContent: HomeContent = {
 		),
 		body: (
 			<>
-				I&apos;m a full-stack web developer using popular libraries, such as{" "}
-				<span className="text-[#00a0dc] font-bold">React</span> and{" "}
-				<span className="text-[#00a0dc] font-bold">Express</span>, to create
-				websites and apps. Check out some of the companies I&apos;ve worked with
-				below.
+				I&apos;m a full-stack web developer focused on building modern,
+				high-performance websites and applications using the{" "}
+				<span className="text-[#00a0dc]">JAMstack</span>, including Next.js,
+				React, TypeScript, and Supabase. I use these technologies to create
+				fast, scalable, and engaging digital experiences. Check out some of the
+				companies I&apos;ve had the opportunity to work with below.
 			</>
 		),
 	},
@@ -104,8 +105,10 @@ const homeContent: HomeContent = {
 		id: "about",
 		title: "ABOUT",
 		paragraphs: [
-			"While in college I majored in computer science and minored in mathematics. Currently I am a full-stack developer in an ad agency creating websites that allows the user to experience a site suited for the device they are using. I write valid markup that follows current web standards in order to ensure visitors have access to the content on the page.",
-			"From mobile to desktop, I can provide an optimized page for any screen size with responsive web design. Feel free to contact me below if you would like to get in touch.",
+			"I studied Computer Science with a minor in Mathematics, and I’m currently a full-stack developer with 18+ years of experience. I build responsive, user-focused websites while also working on the backend systems and services that power them.",
+			"I enjoy solving problems across the entire stack—from creating clean, standards-compliant front-end experiences to designing reliable backend functionality, APIs, and data-driven solutions. I’m particularly interested in developing systems that are maintainable, scalable, and efficient, with an emphasis on thoughtful engineering and solving problems that have a real impact.",
+			"From mobile to desktop, I create optimized experiences that adapt seamlessly to any screen size while keeping performance, accessibility, and usability in mind.",
+			"If you’d like to get in touch, please use the contact form below.",
 		],
 	},
 	contact: {
