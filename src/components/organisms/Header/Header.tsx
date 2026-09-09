@@ -13,7 +13,7 @@ const Header = ({ brandName, navLinks }: HeaderProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const handleNavClick = () => {
-		if (typeof window !== "undefined" && window.innerWidth < 1280) {
+		if (window.innerWidth < 1280) {
 			setIsOpen(false);
 		}
 	};
