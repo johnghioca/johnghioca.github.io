@@ -10,6 +10,7 @@
 		"biome:check": "biome check --write .",
 		"biome:ci": "biome ci .",
 		"test": "vitest",
+		"test:ci": "vitest run",
 		"test:coverage": "vitest run --coverage"
 	},
 	"dependencies": {
