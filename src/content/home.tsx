@@ -65,13 +65,12 @@ const homeContent: HomeContent = {
 		),
 		body: (
 			<>
-				I&apos;m a full-stack web developer focused on building modern,
-				high-performance websites and applications using the{" "}
-				<span className="text-[#00a0dc]">JAMstack</span>, including Next.js,
-				React, TypeScript, Supabase, and headless CMS platforms. I use these
-				technologies to create fast, scalable, and engaging digital experiences.
-				Check out some of the companies I&apos;ve had the opportunity to work
-				with below.
+				I&apos;m a web developer specializing in modern, high-performance
+				websites and applications, with a focus on the{" "}
+				<span className="text-[#00a0dc]">JAMstack</span> ecosystem. I work
+				primarily with Next.js, React, TypeScript, Supabase, and headless CMS
+				platforms to build fast, scalable, and engaging digital experiences.
+				Below are some of the companies I've had the opportunity to work with.
 			</>
 		),
 	},
@@ -106,9 +105,7 @@ const homeContent: HomeContent = {
 		id: "about",
 		title: "ABOUT",
 		paragraphs: [
-			"I studied Computer Science with a minor in Mathematics, and I’m currently a full-stack developer with 18+ years of experience. I build responsive, user-focused websites while also working on the backend systems and services that power them.",
-			"I enjoy solving problems across the entire stack—from creating clean, standards-compliant front-end experiences to designing reliable backend functionality, APIs, and data-driven solutions. I’m particularly interested in developing systems that are maintainable, scalable, and efficient, with an emphasis on thoughtful engineering and solving problems that have a real impact.",
-			"From mobile to desktop, I create optimized experiences that adapt seamlessly to any screen size while keeping performance, accessibility, and usability in mind.",
+			"Strong problem solver and critical thinking Senior Developer with deep technical proficiency across front-end and back-end technologies. Proven ability to resolve complex issues, anticipate future challenges, architect, and complete scalable systems. Recognized for strategic leadership, making informed technical decisions, adaptability, and collaborating effectively with cross-functional teams.",
 			"If you’d like to get in touch, please use the contact form below.",
 		],
 	},
