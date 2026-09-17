@@ -63,9 +63,7 @@ const homeContent: HomeContent = {
 				<span className="text-[#00a0dc]">JOHN GHIOCA'S</span> PORTFOLIO
 			</>
 		),
-		body: (
-			<>Below are some of the companies John has built experiences for.</>
-		),
+		body: <>Below are some of the companies John has built experiences for.</>,
 	},
 	portfolio: {
 		id: "portfolio",
