@@ -67,7 +67,8 @@ const homeContent: HomeContent = {
 			<>
 				Primary tech stack: React, TypeScript, Next.js, Tailwind, Express,
 				Node.js, RESTful APIs, GraphQL, Headless CMS, MySQL, AWS, Docker,
-				Playwright, Vitest, Jest, GitHub Actions
+				Playwright, Vitest, Jest, GitHub Actions.
+				<br />
 				Below are some of the companies John has built experiences for.
 			</>
 		),
