@@ -65,10 +65,6 @@ const homeContent: HomeContent = {
 		),
 		body: (
 			<>
-				Primary tech stack: React, TypeScript, Next.js, Tailwind, Express,
-				Node.js, RESTful APIs, GraphQL, Headless CMS, MySQL, AWS, Docker,
-				Playwright, Vitest, Jest, GitHub Actions.
-				<br />
 				Below are some of the companies John has built experiences for.
 			</>
 		),
@@ -105,6 +101,7 @@ const homeContent: HomeContent = {
 		title: "ABOUT",
 		paragraphs: [
 			"Strong problem solver and critical thinking Senior Developer with deep technical proficiency across front-end and back-end technologies. Proven ability to resolve complex issues, anticipate future challenges, architect, and complete scalable systems. Recognized for strategic leadership, making informed technical decisions, adaptability, and collaborating effectively with cross-functional teams.",
+			"Primary tech stack: React, TypeScript, Next.js, Tailwind, Express, Node.js, RESTful APIs, GraphQL, Headless CMS, MySQL, AWS, Docker, Playwright, Vitest, Jest, GitHub Actions.",
 			"If you’d like to get in touch, please use the contact form below.",
 		],
 	},
