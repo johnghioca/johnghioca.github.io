@@ -64,9 +64,7 @@ const homeContent: HomeContent = {
 			</>
 		),
 		body: (
-			<>
-				Below are some of the companies John has built experiences for.
-			</>
+			<>Below are some of the companies John has built experiences for.</>
 		),
 	},
 	portfolio: {
