@@ -65,11 +65,11 @@ const homeContent: HomeContent = {
 		),
 		body: (
 			<>
-				I&apos;m a web developer specializing in modern,
-				high-performance websites and applications, with a focus on the{" "}
-				<span className="text-[#00a0dc]">JAMstack</span> ecosystem.
-				I work primarily with Next.js, React, TypeScript, Supabase,
-				and headless CMS platforms to build fast, scalable, and engaging digital experiences.
+				I&apos;m a web developer specializing in modern, high-performance
+				websites and applications, with a focus on the{" "}
+				<span className="text-[#00a0dc]">JAMstack</span> ecosystem. I work
+				primarily with Next.js, React, TypeScript, Supabase, and headless CMS
+				platforms to build fast, scalable, and engaging digital experiences.
 				Below are some of the companies I've had the opportunity to work with.
 			</>
 		),
