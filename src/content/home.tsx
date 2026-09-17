@@ -60,17 +60,16 @@ const homeContent: HomeContent = {
 		id: "home",
 		heading: (
 			<>
-				HELLO, MY NAME IS <span className="text-[#00a0dc]">JOHN GHIOCA</span>
+				<span className="text-[#00a0dc]">JOHN GHIOCA'S</span> PORTFOLIO
 			</>
 		),
 		body: (
 			<>
-				I&apos;m a web developer specializing in modern, high-performance
-				websites and applications, with a focus on the{" "}
-				<span className="text-[#00a0dc]">JAMstack</span> ecosystem. I work
-				primarily with Next.js, React, TypeScript, Supabase, and headless CMS
-				platforms to build fast, scalable, and engaging digital experiences.
-				Below are some of the companies I've had the opportunity to work with.
+				Primary tech stack: React, TypeScript, Next.js, Tailwind, Express,
+				Node.js, RESTful APIs, GraphQL, Headless CMS, MySQL, AWS, Docker,
+				Playwright, Vitest, Jest, GitHub Actions.
+				<br />
+				Below are some of the companies John has built experiences for.
 			</>
 		),
 	},
