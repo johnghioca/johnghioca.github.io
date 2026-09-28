@@ -7,6 +7,7 @@ export default function Home() {
 		<>
 			<Head>
 				<title>{homeContent.documentTitle}</title>
+				<meta name="description" content={homeContent.documentDescription} />
 			</Head>
 			<HomePage content={homeContent} />
 		</>
