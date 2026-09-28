@@ -3,7 +3,7 @@ import { homeContent } from "./home";
 
 test("homeContent exposes expected shape", () => {
 	expect(homeContent.documentTitle).toContain("John Ghioca");
-	expect(homeContent.documentDescription).toBeGreaterThan(0);
+	expect(homeContent.documentDescription.length).toBeGreaterThan(0);
 	expect(homeContent.navLinks.length).toBeGreaterThan(0);
 	expect(homeContent.portfolio.cards.length).toBeGreaterThan(0);
 	expect(homeContent.about.paragraphs.length).toBeGreaterThan(0);
