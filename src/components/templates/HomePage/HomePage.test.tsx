@@ -13,6 +13,7 @@ vi.mock("@/components/organisms/Portfolio/styles.module.css", () => ({
 
 const content: HomeContent = {
 	documentTitle: "Test | Portfolio",
+	documentDescription: "Test Description",
 	brandName: "Test Brand",
 	navLinks: [{ href: "#home", label: "HOME" }],
 	home: { id: "home", heading: "Hello", body: "Body copy" },
