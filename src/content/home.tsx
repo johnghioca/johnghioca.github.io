@@ -51,7 +51,7 @@ type HomeContent = {
 const homeContent: HomeContent = {
 	documentTitle: "John Ghioca | Portfolio",
 	documentDescription:
-		"John Ghioca is a Senior Developer specializing in React, TypeScript, Next.js, Node.js, PostgreSQL, and scalable web applications. Explore his portfolio and experience.",
+		"John Ghioca is a full-stack developer specializing in React, TypeScript, Next.js, Express.js, Node.js, PostgreSQL, and scalable web applications. Explore his portfolio and experience.",
 	brandName: "John Ghioca",
 	navLinks: [
 		{ href: "#home", label: "HOME" },
