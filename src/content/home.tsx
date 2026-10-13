@@ -77,7 +77,7 @@ const homeContent: HomeContent = {
 			"mondelez",
 			"verizon",
 			"starbucks",
-			"google",
+			"northrop-grumman",
 			"maybelline",
 			"murad",
 			"us-soccer",
