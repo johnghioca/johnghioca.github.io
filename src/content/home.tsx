@@ -138,6 +138,8 @@ const homeContent: HomeContent = {
 		submitLabel: "Send",
 	},
 	footer: {
+		linkedIn: "Visit LinkedIn Profile (opens in a new tab)",
+		gitHub: "Visit Github Profile (opens in new tab)",
 		startYear: 2017,
 		name: "John Ghioca",
 	},
