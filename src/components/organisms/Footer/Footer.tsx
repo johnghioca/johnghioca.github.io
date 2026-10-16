@@ -1,6 +1,6 @@
 type FooterProps = {
-	linkedIn: { href: string, label: string };
-	gitHub: { href: string, label: string };
+	linkedIn: { href: string; label: string };
+	gitHub: { href: string; label: string };
 	startYear: number;
 	name: string;
 };
