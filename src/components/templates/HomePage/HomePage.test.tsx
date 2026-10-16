@@ -54,7 +54,7 @@ test("HomePage wires content into page sections", () => {
 	expect(screen.getByRole("heading", { name: "PORTFOLIO" })).toBeDefined();
 	expect(screen.getByRole("heading", { name: "ABOUT" })).toBeDefined();
 	expect(screen.getByRole("heading", { name: "CONTACT" })).toBeDefined();
-	expect(screen.getByRole("image", { name: "LinkedIn" })).toBeDefined();
-	expect(screen.getByRole("image", { name: "GitHub" })).toBeDefined();
+	expect(screen.getByRole("link", { name: "LinkedIn" })).toBeDefined();
+	expect(screen.getByRole("link", { name: "GitHub" })).toBeDefined();
 	expect(screen.getByText(/© 2017-/)).toBeDefined();
 });
