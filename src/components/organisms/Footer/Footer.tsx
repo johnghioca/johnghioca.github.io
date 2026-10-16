@@ -11,16 +11,16 @@ const Footer = ({ linkedIn, gitHub, startYear, name }: FooterProps) => {
 	return (
 		<footer className="bg-black mt-14 md:mt-18">
 			<div className="text-white flex justify-between items-center mx-5 py-3 md:mx-12 xl:max-w-6xl xl:mx-auto">
-				<ul className="flex gap-x-8">
+				<ul className="flex">
 					<li>
 						<a
-							className="hover:text-[#00a0dc] focus:text-[#00a0dc]"
+							className="p-3 pl-0 block hover:text-[#00a0dc] focus:text-[#00a0dc]"
 							href="https://linkedin.com/in/john-ghioca"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							<svg
-								className="size-8"
+								className="size-6"
 								xmlns="http://www.w3.org/2000/svg"
 								fill="currentColor"
 								viewBox="0 0 16 16"
@@ -33,13 +33,13 @@ const Footer = ({ linkedIn, gitHub, startYear, name }: FooterProps) => {
 					</li>
 					<li>
 						<a
-							className="hover:text-[#00a0dc] focus:text-[#00a0dc]"
+							className="p-3 block hover:text-[#00a0dc] focus:text-[#00a0dc]"
 							href="https://github.com/johnghioca"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							<svg
-								className="size-8"
+								className="size-6"
 								xmlns="http://www.w3.org/2000/svg"
 								fill="currentColor"
 								viewBox="0 0 16 16"
