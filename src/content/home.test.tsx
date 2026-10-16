@@ -8,5 +8,7 @@ test("homeContent exposes expected shape", () => {
 	expect(homeContent.portfolio.cards.length).toBeGreaterThan(0);
 	expect(homeContent.about.paragraphs.length).toBeGreaterThan(0);
 	expect(homeContent.contact.fields.length).toBeGreaterThan(0);
+	expect(homeContent.footer.linkedIn.length).toBeGreaterThan(0);
+	expect(homeContent.footer.gitHub.length).toBeGreaterThan(0);
 	expect(homeContent.footer.startYear).toBe(2017);
 });
