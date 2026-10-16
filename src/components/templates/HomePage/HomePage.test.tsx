@@ -38,8 +38,8 @@ const content: HomeContent = {
 		submitLabel: "Send",
 	},
 	footer: {
-		linkedIn: "LinkedIn",
-		gitHub: "GitHub",
+		linkedIn: { href: "https://www.linkedin.com/", label: "LinkedIn" },
+		gitHub: { href: "https://github.com/", label: "GitHub" },
 		startYear: 2017,
 		name: "Test Brand",
 	},
