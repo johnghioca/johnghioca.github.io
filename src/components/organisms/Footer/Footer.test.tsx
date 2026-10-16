@@ -17,7 +17,7 @@ test("Footer renders copyright range", () => {
 			name="John Ghioca"
 		/>,
 	);
-	expect(screen.getByRole("image", { name: "LinkedIn" })).toBeDefined();
-	expect(screen.getByRole("image", { name: "GitHub" })).toBeDefined();
+	expect(screen.getByRole("link", { name: "LinkedIn" })).toBeDefined();
+	expect(screen.getByRole("link", { name: "GitHub" })).toBeDefined();
 	expect(screen.getByText("© 2017-2026 John Ghioca")).toBeDefined();
 });
