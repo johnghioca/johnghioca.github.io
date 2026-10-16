@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
-import { afterEach, expect, test, vi } from "vitest";
+import { render } from "@testing-library/react";
+import { afterEach, test, vi } from "vitest";
 import { Footer } from "./Footer";
 
 afterEach(() => {
@@ -11,8 +11,8 @@ test("Footer renders copyright range", () => {
 	vi.setSystemTime(new Date("2026-06-01"));
 	render(
 		<Footer
-			linkedIn="LinkedIn"
-			gitHub="GitHub"
+			linkedIn={href: "#", label: "LinkedIn"}
+			gitHub={href: "#", label: "GitHub"}
 			startYear={2017}
 			name="John Ghioca"
 		/>,
