@@ -6,13 +6,13 @@ afterEach(() => {
 	vi.useRealTimers();
 });
 
-test("Footer renders copyright range", () => {
+test("Footer renders social icons and copyright range", () => {
 	vi.useFakeTimers();
 	vi.setSystemTime(new Date("2026-06-01"));
 	render(
 		<Footer
-			linkedIn="LinkedIn"
-			gitHub="GitHub"
+			linkedIn={{ href: "#", label: "LinkedIn" }}
+			gitHub={{ href: "#", label: "GitHub" }}
 			startYear={2017}
 			name="John Ghioca"
 		/>,
