@@ -37,7 +37,7 @@ const content: HomeContent = {
 		requiredNote: "*All fields are required.",
 		submitLabel: "Send",
 	},
-	footer: { startYear: 2017, name: "Test Brand" },
+	footer: { linkedIn: "LinkedIn", gitHub: "GitHub", startYear: 2017, name: "Test Brand" },
 };
 
 test("HomePage wires content into page sections", () => {
@@ -49,5 +49,7 @@ test("HomePage wires content into page sections", () => {
 	expect(screen.getByRole("heading", { name: "PORTFOLIO" })).toBeDefined();
 	expect(screen.getByRole("heading", { name: "ABOUT" })).toBeDefined();
 	expect(screen.getByRole("heading", { name: "CONTACT" })).toBeDefined();
+	expect(screen.getByRole("image", { name: "LinkedIn" })).toBeDefined();
+	expect(screen.getByRole("image", { name: "GitHub" })).toBeDefined();
 	expect(screen.getByText(/© 2017-/)).toBeDefined();
 });
