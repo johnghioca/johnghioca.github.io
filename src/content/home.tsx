@@ -43,6 +43,8 @@ type HomeContent = {
 		submitLabel: string;
 	};
 	footer: {
+		linkedIn: string;
+		gitHub: string;
 		startYear: number;
 		name: string;
 	};
