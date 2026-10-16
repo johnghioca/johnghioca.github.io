@@ -140,11 +140,17 @@ const homeContent: HomeContent = {
 		submitLabel: "Send",
 	},
 	footer: {
-		linkedIn: { href: "https://linkedin.com/in/john-ghioca", label: "Visit LinkedIn Profile (opens in a new tab)" },
-		gitHub: { href: "https://github.com/johnghioca", label: "Visit Github Profile (opens in new tab)" },
+		linkedIn: {
+			href: "https://linkedin.com/in/john-ghioca",
+			label: "Visit LinkedIn Profile (opens in a new tab)",
+		},
+		gitHub: {
+			href: "https://github.com/johnghioca",
+			label: "Visit Github Profile (opens in new tab)",
+		},
 		startYear: 2017,
 		name: "John Ghioca",
 	},
 };
 
-export { homeContent, type FormFieldConfig, type HomeContent, type NavLink };
+export { type FormFieldConfig, type HomeContent, homeContent, type NavLink };
