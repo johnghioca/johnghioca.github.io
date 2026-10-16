@@ -37,7 +37,12 @@ const content: HomeContent = {
 		requiredNote: "*All fields are required.",
 		submitLabel: "Send",
 	},
-	footer: { linkedIn: "LinkedIn", gitHub: "GitHub", startYear: 2017, name: "Test Brand" },
+	footer: {
+		linkedIn: "LinkedIn",
+		gitHub: "GitHub",
+		startYear: 2017,
+		name: "Test Brand",
+	},
 };
 
 test("HomePage wires content into page sections", () => {
